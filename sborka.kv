@@ -18,6 +18,30 @@ WindowManager:
     friday_var: FridayID
     saturday_var: SaturdayID
 
+    monday_var_1color: Monday1ColorID
+    monday_var_2color: Monday2ColorID
+    monday_var_3color: Monday3ColorID
+    monday_var_4color: Monday4ColorID
+
+    tuesday_var_1color: Tuesday1ColorID
+    tuesday_var_2color: Tuesday2ColorID
+    tuesday_var_3color: Tuesday3ColorID
+    tuesday_var_4color: Tuesday4ColorID
+
+    thursday_var_1color: Thursday1ColorID
+    thursday_var_2color: Thursday2ColorID
+    thursday_var_3color: Thursday3ColorID
+    thursday_var_4color: Thursday4ColorID
+
+    friday_var_1color: Friday1ColorID
+    friday_var_2color: Friday2ColorID
+    friday_var_3color: Friday3ColorID
+    friday_var_4color: Friday4ColorID
+
+    saturday_var_1color: Saturday1ColorID
+    saturday_var_2color: Saturday2ColorID
+    saturday_var_3color: Saturday3ColorID
+    saturday_var_4color: Saturday4ColorID
 
     BoxLayout:
         orientation: "vertical"
@@ -28,57 +52,152 @@ WindowManager:
             orientation: "horizontal"
             spacing: 10
 
-            Button:
-                id: MondayID
-                text: "1"
-                on_release:
-                    app.root.current = "changedayinfo"
-                    root.manager.transition.direction = "down"
-                    root.on_monday()
+            BoxLayout:
+                orientation: "vertical"
 
-            Button:
-                id: TuesdayID
-                text: "2"
-                on_release:
-                    app.root.current = "changedayinfo"
-                    root.manager.transition.direction = "down"
-                    root.on_tuesday()
+                BoxLayout:
+                    size_hint_y: 0.1
 
-            Button:
-                id: WednesdayID
-                text: "3"
-                on_release:
-                    app.root.current = "changedayinfo"
-                    root.manager.transition.direction = "down"
-                    root.on_wednesday()
+                    Button:
+                        id:Monday1ColorID
+                    Button:
+                        id:Monday2ColorID
+                    Button:
+                        id:Monday3ColorID
+                    Button:
+                        id:Monday4ColorID
+
+                BoxLayout:
+                    Button:
+                        id: MondayID
+                        text: "1"
+                        on_release:
+                            app.root.current = "changedayinfo"
+                            root.manager.transition.direction = "down"
+                            root.on_monday()
+
+            BoxLayout:
+                orientation: "vertical"
+
+                BoxLayout:
+                    size_hint_y: 0.1
+
+                    Button:
+                        id:Tuesday1ColorID
+                    Button:
+                        id:Tuesday2ColorID
+                    Button:
+                        id:Tuesday3ColorID
+                    Button:
+                        id:Tuesday4ColorID
+
+                BoxLayout:
+                    Button:
+                        id: TuesdayID
+                        text: "2"
+                        on_release:
+                            app.root.current = "changedayinfo"
+                            root.manager.transition.direction = "down"
+                            root.on_tuesday()
+            BoxLayout:
+                orientation: "vertical"
+
+                BoxLayout:
+                    size_hint_y: 0.1
+
+                    Button:
+                        id: Wednesday1ColorID
+                    Button:
+                        id: Wednesday2ColorID
+                    Button:
+                        id: Wednesday3ColorID
+                    Button:
+                        id: Wednesday4ColorID
+
+                BoxLayout:
+                    Button:
+                        id: WednesdayID
+                        text: "3"
+                        on_release:
+                            app.root.current = "changedayinfo"
+                            root.manager.transition.direction = "down"
+                            root.on_wednesday()
 
         BoxLayout:
             orientation: "horizontal"
             spacing: 10
 
-            Button:
-                id: ThursdayID
-                text: "4"
-                on_release:
-                    app.root.current = "changedayinfo"
-                    root.manager.transition.direction = "down"
-                    root.on_thursday()
+            BoxLayout:
+                orientation: "vertical"
 
-            Button:
-                id: FridayID
-                text: "5"
-                on_release:
-                    app.root.current = "changedayinfo"
-                    root.manager.transition.direction = "down"
-                    root.on_friday()
+                BoxLayout:
+                    size_hint_y: 0.1
 
-            Button:
-                id: SaturdayID
-                text: "6"
-                on_release:
-                    app.root.current = "changedayinfo"
-                    root.manager.transition.direction = "down"
-                    root.on_saturday()
+                    Button:
+                        id: Thursday1ColorID
+                    Button:
+                        id: Thursday2ColorID
+                    Button:
+                        id: Thursday3ColorID
+                    Button:
+                        id: Thursday4ColorID
+
+                BoxLayout:
+                    Button:
+                        id: ThursdayID
+                        text: "4"
+                        on_release:
+                            app.root.current = "changedayinfo"
+                            root.manager.transition.direction = "down"
+                            root.on_thursday()
+
+            BoxLayout:
+                orientation: "vertical"
+
+                BoxLayout:
+                    size_hint_y: 0.1
+
+                    Button
+                        id: Friday1ColorID
+                    Button:
+                        id: Friday2ColorID
+                    Button:
+                        id: Friday3ColorID
+                    Button:
+                        id: Friday4ColorID
+
+                BoxLayout:
+                    Button:
+                        id: FridayID
+                        text: "5"
+                        on_release:
+                            app.root.current = "changedayinfo"
+                            root.manager.transition.direction = "down"
+                            root.on_friday()
+
+            BoxLayout:
+                orientation: "vertical"
+
+                BoxLayout:
+                    size_hint_y: 0.1
+
+                    Button:
+                        id: Saturday1ColorID
+                    Button:
+                        id: Saturday2ColorID
+                    Button:
+                        id: Saturday3ColorID
+                    Button:
+                        id: Saturday4ColorID
+
+                BoxLayout:
+                    Button:
+                        id: SaturdayID
+                        text: "6"
+                        on_release:
+                            app.root.current = "changedayinfo"
+                            root.manager.transition.direction = "down"
+                            root.on_saturday()
 
         BoxLayout:
             size_hint_y: 0.2
@@ -345,6 +464,8 @@ WindowManager:
     third_text: ThirdTextId
     fourth_text: FourthTextId
     fifth_text: FifthTextId
+    sixth_text: SixthTextId
+    seventh_text: SeventhTextId
 
     BoxLayout:
         orientation: "vertical"
@@ -399,15 +520,21 @@ WindowManager:
             Label:
                 size_hint_x: 0.4
                 text: "Шестая пара"
+            TextInput:
+                id: SixthTextId
+                multiline: False
 
         BoxLayout:
             size_hint_y: 0.1
             Label:
                 size_hint_x: 0.4
                 text: "Седьмая пара"
+            TextInput:
+                id: SeventhTextId
+                multiline: False
 
         Label:
-            text: "Zagluska"
+            text: "Совет: пишите номер кабинета(аудитории) и название предмета"
 
         Button:
             size_hint_y: 0.1

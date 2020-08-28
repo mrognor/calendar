@@ -19,7 +19,7 @@ if n != 6:
 
 try:
     DayInfoFile = open("DayInfoFile.txt", "r")
-    dayinfo = ["" for i in range(50)]
+    dayinfo = ["" for i in range(200)]
     dayinfostr = DayInfoFile.read().splitlines()
 
     for i in range(len(dayinfostr)):
@@ -27,7 +27,7 @@ try:
 
 except FileNotFoundError:
     DayInfoFile = open("DayInfoFile.txt", "w+")
-    dayinfo = ["" for i in range(50)]
+    dayinfo = ["" for i in range(200)]
 
 try:
     UniversityInfo = open("UniversityInfo.txt", "r+")
@@ -59,6 +59,10 @@ university_deleteid = -1
 
 
 class CalendarWindow(Screen):
+
+    def on_enter(self):
+        print(dir(self))
+        #print(dir(self.monday_var_1color))
 
     def on_monday(self):
         global dayid
@@ -561,50 +565,64 @@ class ChangeUniversityWindow(Screen):
 class ChangeDayInfoWindow(Screen):
     def on_enter(self):
         if dayid == 1:
-            self.first_text.text = dayinfo[0]
-            self.second_text.text = dayinfo[6]
-            self.third_text.text = dayinfo[12]
-            self.fourth_text.text = dayinfo[18]
-            self.fifth_text.text = dayinfo[24]
-        if dayid == 2:
             self.first_text.text = dayinfo[1]
-            self.second_text.text = dayinfo[7]
+            self.second_text.text = dayinfo[2]
+            self.third_text.text = dayinfo[3]
+            self.fourth_text.text = dayinfo[4]
+            self.fifth_text.text = dayinfo[5]
+            self.sixth_text.text = dayinfo[6]
+            self.seventh_text.text = dayinfo[7]
+        if dayid == 2:
+            self.first_text.text = dayinfo[11]
+            self.second_text.text = dayinfo[12]
             self.third_text.text = dayinfo[13]
-            self.fourth_text.text = dayinfo[19]
-            self.fifth_text.text = dayinfo[25]
+            self.fourth_text.text = dayinfo[14]
+            self.fifth_text.text = dayinfo[15]
+            self.sixth_text.text = dayinfo[16]
+            self.seventh_text.text = dayinfo[17]
         if dayid == 3:
-            self.first_text.text = dayinfo[2]
-            self.second_text.text = dayinfo[8]
-            self.third_text.text = dayinfo[14]
-            self.fourth_text.text = dayinfo[20]
-            self.fifth_text.text = dayinfo[26]
+            self.first_text.text = dayinfo[21]
+            self.second_text.text = dayinfo[22]
+            self.third_text.text = dayinfo[23]
+            self.fourth_text.text = dayinfo[24]
+            self.fifth_text.text = dayinfo[25]
+            self.sixth_text.text = dayinfo[26]
+            self.seventh_text.text = dayinfo[27]
         if dayid == 4:
-            self.first_text.text = dayinfo[3]
-            self.second_text.text = dayinfo[9]
-            self.third_text.text = dayinfo[15]
-            self.fourth_text.text = dayinfo[21]
-            self.fifth_text.text = dayinfo[27]
+            self.first_text.text = dayinfo[31]
+            self.second_text.text = dayinfo[32]
+            self.third_text.text = dayinfo[33]
+            self.fourth_text.text = dayinfo[34]
+            self.fifth_text.text = dayinfo[35]
+            self.sixth_text.text = dayinfo[36]
+            self.seventh_text.text = dayinfo[37]
         if dayid == 5:
-            self.first_text.text = dayinfo[4]
-            self.second_text.text = dayinfo[10]
-            self.third_text.text = dayinfo[16]
-            self.fourth_text.text = dayinfo[22]
-            self.fifth_text.text = dayinfo[28]
+            self.first_text.text = dayinfo[41]
+            self.second_text.text = dayinfo[42]
+            self.third_text.text = dayinfo[43]
+            self.fourth_text.text = dayinfo[44]
+            self.fifth_text.text = dayinfo[45]
+            self.sixth_text.text = dayinfo[46]
+            self.seventh_text.text = dayinfo[47]
         if dayid == 6:
-            self.first_text.text = dayinfo[5]
-            self.second_text.text = dayinfo[11]
-            self.third_text.text = dayinfo[17]
-            self.fourth_text.text = dayinfo[23]
-            self.fifth_text.text = dayinfo[29]
+            self.first_text.text = dayinfo[51]
+            self.second_text.text = dayinfo[52]
+            self.third_text.text = dayinfo[53]
+            self.fourth_text.text = dayinfo[54]
+            self.fifth_text.text = dayinfo[55]
+            self.sixth_text.text = dayinfo[56]
+            self.seventh_text.text = dayinfo[57]
 
     def set_values(self):
         if dayid == 1:
-            self.parent.calendar_var.monday_var.text = Monday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text
-            dayinfo[0] = self.first_text.text
-            dayinfo[6] = self.second_text.text
-            dayinfo[12] = self.third_text.text
-            dayinfo[18] = self.fourth_text.text
-            dayinfo[24] = self.fifth_text.text
+            self.parent.calendar_var.monday_var.text = Monday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
+            dayinfo[1] = self.first_text.text
+            dayinfo[2] = self.second_text.text
+            dayinfo[3] = self.third_text.text
+            dayinfo[4] = self.fourth_text.text
+            dayinfo[5] = self.fifth_text.text
+            dayinfo[6] = self.sixth_text.text
+            dayinfo[7] = self.seventh_text.text
             os.remove("DayInfoFile.txt")
             DayInfoFile = open("DayInfoFile.txt", "w")
 
@@ -613,12 +631,14 @@ class ChangeDayInfoWindow(Screen):
             DayInfoFile.close()
 
         if dayid == 2:
-            self.parent.calendar_var.tuesday_var.text = Tuesday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text
-            dayinfo[1] = self.first_text.text.strip()
-            dayinfo[7] = self.second_text.text
+            self.parent.calendar_var.tuesday_var.text = Tuesday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
+            dayinfo[11] = self.first_text.text
+            dayinfo[12] = self.second_text.text
             dayinfo[13] = self.third_text.text
-            dayinfo[19] = self.fourth_text.text
-            dayinfo[25] = self.fifth_text.text
+            dayinfo[14] = self.fourth_text.text
+            dayinfo[15] = self.fifth_text.text
+            dayinfo[16] = self.sixth_text.text
+            dayinfo[17] = self.seventh_text.text
             os.remove("DayInfoFile.txt")
             DayInfoFile = open("DayInfoFile.txt", "w")
 
@@ -628,12 +648,14 @@ class ChangeDayInfoWindow(Screen):
             DayInfoFile.close()
 
         if dayid == 3:
-            self.parent.calendar_var.wednesday_var.text = Wednesday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text
-            dayinfo[2] = self.first_text.text
-            dayinfo[8] = self.second_text.text
-            dayinfo[14] = self.third_text.text
-            dayinfo[20] = self.fourth_text.text
-            dayinfo[26] = self.fifth_text.text
+            self.parent.calendar_var.wednesday_var.text = Wednesday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
+            dayinfo[21] = self.first_text.text
+            dayinfo[22] = self.second_text.text
+            dayinfo[23] = self.third_text.text
+            dayinfo[24] = self.fourth_text.text
+            dayinfo[25] = self.fifth_text.text
+            dayinfo[26] = self.sixth_text.text
+            dayinfo[27] = self.seventh_text.text
             os.remove("DayInfoFile.txt")
             DayInfoFile = open("DayInfoFile.txt", "w")
 
@@ -643,12 +665,14 @@ class ChangeDayInfoWindow(Screen):
             DayInfoFile.close()
 
         if dayid == 4:
-            self.parent.calendar_var.thursday_var.text = Thursday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text
-            dayinfo[3] = self.first_text.text
-            dayinfo[9] = self.second_text.text
-            dayinfo[15] = self.third_text.text
-            dayinfo[21] = self.fourth_text.text
-            dayinfo[27] = self.fifth_text.text
+            self.parent.calendar_var.thursday_var.text = Thursday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
+            dayinfo[31] = self.first_text.text
+            dayinfo[32] = self.second_text.text
+            dayinfo[33] = self.third_text.text
+            dayinfo[34] = self.fourth_text.text
+            dayinfo[35] = self.fifth_text.text
+            dayinfo[36] = self.sixth_text.text
+            dayinfo[37] = self.seventh_text.text
             os.remove("DayInfoFile.txt")
             DayInfoFile = open("DayInfoFile.txt", "w")
 
@@ -658,12 +682,14 @@ class ChangeDayInfoWindow(Screen):
             DayInfoFile.close()
 
         if dayid == 5:
-            self.parent.calendar_var.friday_var.text = Friday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text
-            dayinfo[4] = self.first_text.text
-            dayinfo[10] = self.second_text.text
-            dayinfo[16] = self.third_text.text
-            dayinfo[22] = self.fourth_text.text
-            dayinfo[28] = self.fifth_text.text
+            self.parent.calendar_var.friday_var.text = Friday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
+            dayinfo[41] = self.first_text.text
+            dayinfo[42] = self.second_text.text
+            dayinfo[43] = self.third_text.text
+            dayinfo[44] = self.fourth_text.text
+            dayinfo[45] = self.fifth_text.text
+            dayinfo[46] = self.sixth_text.text
+            dayinfo[47] = self.seventh_text.text
             os.remove("DayInfoFile.txt")
             DayInfoFile = open("DayInfoFile.txt", "w")
 
@@ -673,12 +699,14 @@ class ChangeDayInfoWindow(Screen):
             DayInfoFile.close()
 
         if dayid == 6:
-            self.parent.calendar_var.saturday_var.text = Saturday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text
-            dayinfo[5] = self.first_text.text
-            dayinfo[11] = self.second_text.text
-            dayinfo[17] = self.third_text.text
-            dayinfo[23] = self.fourth_text.text
-            dayinfo[29] = self.fifth_text.text
+            self.parent.calendar_var.saturday_var.text = Saturday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
+            dayinfo[51] = self.first_text.text
+            dayinfo[52] = self.second_text.text
+            dayinfo[53] = self.third_text.text
+            dayinfo[54] = self.fourth_text.text
+            dayinfo[55] = self.fifth_text.text
+            dayinfo[56] = self.sixth_text.text
+            dayinfo[57] = self.seventh_text.text
             os.remove("DayInfoFile.txt")
             DayInfoFile = open("DayInfoFile.txt", "w")
 
@@ -735,22 +763,22 @@ class SborkaApp(App):
         return kv
 
     def on_start(self):
-        self.root.calendar_var.monday_var.text = Monday + "\n" + dayinfo[0] + "\n" + dayinfo[6] + "\n" + dayinfo[12] + "\n" + dayinfo[18] + "\n" + dayinfo[24]
+        self.root.calendar_var.monday_var.text = Monday + "\n" + dayinfo[1] + "\n" + dayinfo[2] + "\n" + dayinfo[3] + "\n" + dayinfo[4] + "\n" + dayinfo[5] + "\n" + dayinfo[6] + "\n" + dayinfo[7]
         self.root.calendar_var.monday_var.background_color = BackgroundsColors[0]
 
-        self.root.calendar_var.tuesday_var.text = Tuesday + "\n" + dayinfo[1] + "\n" + dayinfo[7] + "\n" + dayinfo[13] + "\n" + dayinfo[19] + "\n" + dayinfo[25]
+        self.root.calendar_var.tuesday_var.text = Tuesday + "\n" + dayinfo[11] + "\n" + dayinfo[12] + "\n" + dayinfo[13] + "\n" + dayinfo[14] + "\n" + dayinfo[15] + "\n" + dayinfo[16] + "\n" + dayinfo[17]
         self.root.calendar_var.tuesday_var.background_color = BackgroundsColors[1]
 
-        self.root.calendar_var.wednesday_var.text = Wednesday + "\n" + dayinfo[2] + "\n" + dayinfo[8] + "\n" + dayinfo[14] + "\n" + dayinfo[20] + "\n" + dayinfo[26]
+        self.root.calendar_var.wednesday_var.text = Wednesday + "\n" + dayinfo[21] + "\n" + dayinfo[22] + "\n" + dayinfo[23] + "\n" + dayinfo[24] + "\n" + dayinfo[25] + "\n" + dayinfo[26] + "\n" + dayinfo[27]
         self.root.calendar_var.wednesday_var.background_color = BackgroundsColors[2]
 
-        self.root.calendar_var.thursday_var.text = Thursday + "\n" + dayinfo[3] + "\n" + dayinfo[9] + "\n" + dayinfo[15] + "\n" + dayinfo[21] + "\n" + dayinfo[27]
+        self.root.calendar_var.thursday_var.text = Thursday + "\n" + dayinfo[31] + "\n" + dayinfo[32] + "\n" + dayinfo[33] + "\n" + dayinfo[34] + "\n" + dayinfo[35] + "\n" + dayinfo[36] + "\n" + dayinfo[37]
         self.root.calendar_var.thursday_var.background_color = BackgroundsColors[3]
 
-        self.root.calendar_var.friday_var.text = Friday + "\n" + dayinfo[4] + "\n" + dayinfo[10] + "\n" + dayinfo[16] + "\n" + dayinfo[22] + "\n" + dayinfo[28]
+        self.root.calendar_var.friday_var.text = Friday + "\n" + dayinfo[41] + "\n" + dayinfo[42] + "\n" + dayinfo[43] + "\n" + dayinfo[44] + "\n" + dayinfo[45] + "\n" + dayinfo[46] + "\n" + dayinfo[47]
         self.root.calendar_var.friday_var.background_color = BackgroundsColors[4]
 
-        self.root.calendar_var.saturday_var.text = Saturday + "\n" + dayinfo[5] + "\n" + dayinfo[11] + "\n" + dayinfo[17] + "\n" + dayinfo[23] + "\n" + dayinfo[29]
+        self.root.calendar_var.saturday_var.text = Saturday + "\n" + dayinfo[51] + "\n" + dayinfo[52] + "\n" + dayinfo[53] + "\n" + dayinfo[54] + "\n" + dayinfo[55] + "\n" + dayinfo[56] + "\n" + dayinfo[57]
         self.root.calendar_var.saturday_var.background_color = BackgroundsColors[5]
 
 
