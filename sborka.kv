@@ -1,0 +1,443 @@
+WindowManager:
+    calendar_var: CalendarID
+    change_day_info_var: ChangeDayInfoID
+    CalendarWindow:
+        id: CalendarID
+    AddUniversityWindow:
+    ChangeUniversityWindow:
+    ChangeDayInfoWindow:
+        id: ChangeDayInfoID
+    DeleteUniversityWindow:
+
+<CalendarWindow>:
+    name: "calendar"
+    monday_var: MondayID
+    tuesday_var: TuesdayID
+    wednesday_var: WednesdayID
+    thursday_var: ThursdayID
+    friday_var: FridayID
+    saturday_var: SaturdayID
+
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+
+            Button:
+                id: MondayID
+                text: "1"
+                on_release:
+                    app.root.current = "changedayinfo"
+                    root.manager.transition.direction = "down"
+                    root.on_monday()
+
+            Button:
+                id: TuesdayID
+                text: "2"
+                on_release:
+                    app.root.current = "changedayinfo"
+                    root.manager.transition.direction = "down"
+                    root.on_tuesday()
+
+            Button:
+                id: WednesdayID
+                text: "3"
+                on_release:
+                    app.root.current = "changedayinfo"
+                    root.manager.transition.direction = "down"
+                    root.on_wednesday()
+
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+
+            Button:
+                id: ThursdayID
+                text: "4"
+                on_release:
+                    app.root.current = "changedayinfo"
+                    root.manager.transition.direction = "down"
+                    root.on_thursday()
+
+            Button:
+                id: FridayID
+                text: "5"
+                on_release:
+                    app.root.current = "changedayinfo"
+                    root.manager.transition.direction = "down"
+                    root.on_friday()
+
+            Button:
+                id: SaturdayID
+                text: "6"
+                on_release:
+                    app.root.current = "changedayinfo"
+                    root.manager.transition.direction = "down"
+                    root.on_saturday()
+
+        BoxLayout:
+            size_hint_y: 0.2
+            orientation: "horizontal"
+            padding: 2
+            spacing: 20
+
+            Button:
+                text: "Мэнеджер вузов"
+                on_release:
+                    app.root.current = "changeuniversity"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "Добавить вуз"
+                on_release:
+                    app.root.current = "adduniversity"
+                    root.manager.transition.direction = "left"
+
+<AddUniversityWindow>:
+    name: "adduniversity"
+    button_var1: Button1ID
+    button_var2: Button2ID
+    button_var3: Button3ID
+    button_var4: Button4ID
+    button_var5: Button5ID
+    button_var6: Button6ID
+
+    button_var7: Button7ID
+    button_var8: Button8ID
+    button_var9: Button9ID
+    button_var10: Button10ID
+    button_var11: Button11ID
+    button_var12: Button12ID
+
+    text_input_var: TextInputID
+
+    BoxLayout:
+        padding: 10
+        orientation: "vertical"
+
+        BoxLayout:
+            spacing: 10
+            orientation: "vertical"
+
+            Label:
+                text: "Введите название"
+                size_hint_y: 0.2
+
+            TextInput:
+                id: TextInputID
+                multiline: False
+
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10
+
+            Label:
+                text: "Задайте цвет"
+                size_hint_y: 0.2
+
+            GridLayout:
+                cols: 3
+                Button:
+                    id: Button1ID
+                    background_color: 0, 0, 1, 1
+                    base_color: 0, 0, 1, 1
+                    on_release:
+                        root.set_butonncolor(1)
+
+                Button:
+                    id: Button2ID
+                    background_color: 0, 1, 0, 1
+                    base_color: 0, 1, 0, 1
+                    on_release:
+                        root.set_butonncolor(2)
+
+                Button:
+                    id: Button3ID
+                    background_color: 1, 0, 0, 1
+                    base_color: 1, 0, 0, 1
+                    on_release:
+                        root.set_butonncolor(3)
+
+                Button:
+                    id: Button4ID
+                    background_color: 1, 1, 0, 1
+                    base_color: 1, 1, 0, 1
+                    on_release:
+                        root.set_butonncolor(4)
+
+                Button:
+                    id: Button5ID
+                    background_color: 1, 0, 1, 1
+                    base_color: 1, 0, 1, 1
+                    on_release:
+                        root.set_butonncolor(5)
+
+                Button:
+                    id: Button6ID
+                    background_color: 0, 1, 1, 1
+                    base_color: 0, 1, 1, 1
+                    on_release:
+                        root.set_butonncolor(6)
+
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10
+
+            Label:
+                text: "Укажите день недели"
+                size_hint_y: 0.2
+
+            GridLayout:
+                cols: 3
+
+                Button:
+                    id: Button7ID
+                    text: "Понедельник"
+                    on_release:
+                        root.set_butonncolor(7)
+
+                Button:
+                    id: Button8ID
+                    text: "Вторник"
+                    on_release:
+                        root.set_butonncolor(8)
+
+                Button:
+                    id: Button9ID
+                    text: "Среда"
+                    on_release:
+                        root.set_butonncolor(9)
+
+                Button:
+                    id: Button10ID
+                    text: "Четверг"
+                    on_release:
+                        root.set_butonncolor(10)
+
+                Button:
+                    id: Button11ID
+                    text: "Пятница"
+                    on_release:
+                        root.set_butonncolor(11)
+
+                Button:
+                    id: Button12ID
+                    text: "Суббота"
+                    on_release:
+                        root.set_butonncolor(12)
+
+        BoxLayout:
+            size_hint_y: 0.2
+            orientation: "horizontal"
+
+            Button:
+                text: "Отменить"
+                on_release:
+                    app.root.current = "calendar"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "Сохранить"
+                on_release:
+                    app.root.current = "calendar"
+                    root.manager.transition.direction = "right"
+                    root.set_university_values()
+
+<ChangeUniversityWindow>:
+    name: "changeuniversity"
+    box_var1: BoxID1
+    box_var2: BoxID2
+    box_var3: BoxID3
+    box_var4: BoxID4
+
+    button_var1: ButtonID1
+    button_var2: ButtonID2
+    button_var3: ButtonID3
+    button_var4: ButtonID4
+
+    color_button_var1: ColorButtonID1
+    color_button_var2: ColorButtonID2
+    color_button_var3: ColorButtonID3
+    color_button_var4: ColorButtonID4
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+
+        BoxLayout:
+            opacity: 0
+            id: BoxID1
+
+            Button:
+                id: ButtonID1
+                on_release:
+                    app.root.current = "deleteuniversitywindow"
+                    root.manager.transition.direction = "right"
+                    root.set_1university_id()
+
+            Button:
+                id: ColorButtonID1
+                size_hint_x: 0.2
+
+        BoxLayout:
+            opacity: 0
+            id: BoxID2
+
+            Button:
+                id: ButtonID2
+                on_release:
+                    app.root.current = "deleteuniversitywindow"
+                    root.manager.transition.direction = "right"
+                    root.set_2university_id()
+
+            Button:
+                id: ColorButtonID2
+                size_hint_x: 0.2
+
+        BoxLayout:
+            opacity: 0
+            id: BoxID3
+
+            Button:
+                id: ButtonID3
+                on_release:
+                    app.root.current = "deleteuniversitywindow"
+                    root.manager.transition.direction = "right"
+                    root.set_3university_id()
+
+            Button:
+                id: ColorButtonID3
+                size_hint_x: 0.2
+
+        BoxLayout:
+            opacity: 0
+            id: BoxID4
+
+            Button:
+                id: ButtonID4
+                on_release:
+                    app.root.current = "deleteuniversitywindow"
+                    root.manager.transition.direction = "right"
+                    root.set_4university_id()
+
+            Button:
+                id: ColorButtonID4
+                size_hint_x: 0.2
+
+        BoxLayout:
+            padding: 10
+            Button:
+                text: "Назад"
+                on_release:
+                    app.root.current = "calendar"
+                    root.manager.transition.direction = "left"
+
+<ChangeDayInfoWindow>:
+    name: "changedayinfo"
+    first_text: FirstTextID
+    second_text: SecondTextID
+    third_text: ThirdTextId
+    fourth_text: FourthTextId
+    fifth_text: FifthTextId
+
+    BoxLayout:
+        orientation: "vertical"
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Первая пара"
+            TextInput:
+                id: FirstTextID
+                multiline: False
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Вторая пара"
+            TextInput:
+                id: SecondTextID
+                multiline: False
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Третья пара"
+            TextInput:
+                id: ThirdTextId
+                multiline: False
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Четвертая пара"
+            TextInput:
+                id: FourthTextId
+                multiline: False
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Пятая пара"
+            TextInput:
+                id: FifthTextId
+                multiline: False
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Шестая пара"
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Label:
+                size_hint_x: 0.4
+                text: "Седьмая пара"
+
+        Label:
+            text: "Zagluska"
+
+        Button:
+            size_hint_y: 0.1
+            text: "Сохранить"
+            on_release:
+                app.root.current = "calendar"
+                root.manager.transition.direction = "up"
+                root.set_values()
+
+<DeleteUniversityWindow>:
+    name: "deleteuniversitywindow"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+        Button:
+            text: "Удалить ?"
+        BoxLayout:
+            spacing: 10
+            padding: 10
+
+            Button:
+                text: "Да"
+                on_release:
+                    app.root.current = "calendar"
+                    root.manager.transition.direction = "left"
+                    root.delete_university()
+
+            Button:
+                text: "Нет"
+                on_release:
+                    app.root.current = "changeuniversity"
+                    root.manager.transition.direction = "left"
