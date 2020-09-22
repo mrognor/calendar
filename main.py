@@ -84,21 +84,33 @@ class CalendarWindow(Screen):
 
                 if days[0] == "[True" or days[0] == True:
                     self.monday_var_1color.background_color = color
+                else:
+                    self.monday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days[1] == " True" or days[1] == True:
                     self.tuesday_var_1color.background_color = color
+                else:
+                    self.tuesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days[2] == " True" or days[2] == True:
                     self.wednesday_var_1color.background_color = color
+                else:
+                    self.wednesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days[3] == " True" or days[3] == True:
                     self.thursday_var_1color.background_color = color
+                else:
+                    self.thursday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days[4] == " True" or days[4] == True:
                     self.friday_var_1color.background_color = color
+                else:
+                    self.friday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days[5] == " True]" or days[5] == True:
                     self.saturday_var_1color.background_color = color
+                else:
+                    self.saturday_var_1color.background_color = [1, 1, 1, 1]
 
                 self.monday_var_2color.background_color = [1, 1, 1, 1]
                 self.tuesday_var_2color.background_color = [1, 1, 1, 1]
@@ -144,39 +156,63 @@ class CalendarWindow(Screen):
 
                 if days1[0] == "[True" or days1[0] == True:
                     self.monday_var_1color.background_color = color1
+                else:
+                    self.monday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[1] == " True" or days1[1] == True:
                     self.tuesday_var_1color.background_color = color1
+                else:
+                    self.tuesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[2] == " True" or days1[2] == True:
                     self.wednesday_var_1color.background_color = color1
+                else:
+                    self.wednesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[3] == " True" or days1[3] == True:
                     self.thursday_var_1color.background_color = color1
+                else:
+                    self.thursday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[4] == " True" or days1[4] == True:
                     self.friday_var_1color.background_color = color1
+                else:
+                    self.friday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[5] == " True]" or days1[5] == True:
                     self.saturday_var_1color.background_color = color1
+                else:
+                    self.saturday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days2[0] == "[True" or days2[0] == True:
                     self.monday_var_2color.background_color = color2
+                else:
+                    self.monday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[1] == " True" or days2[1] == True:
                     self.tuesday_var_2color.background_color = color2
+                else:
+                    self.tuesday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[2] == " True" or days2[2] == True:
                     self.wednesday_var_2color.background_color = color2
+                else:
+                    self.wednesday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[3] == " True" or days2[3] == True:
                     self.thursday_var_2color.background_color = color2
+                else:
+                    self.thursday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[4] == " True" or days2[4] == True:
                     self.friday_var_2color.background_color = color2
+                else:
+                    self.friday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[5] == " True]" or days2[5] == True:
                     self.saturday_var_2color.background_color = color2
+                else:
+                    self.saturday_var_2color.background_color = [1, 1, 1, 1]
 
                 self.monday_var_3color.background_color = [1, 1, 1, 1]
                 self.tuesday_var_3color.background_color = [1, 1, 1, 1]
@@ -225,57 +261,93 @@ class CalendarWindow(Screen):
 
                 if days1[0] == "[True" or days1[0] == True:
                     self.monday_var_1color.background_color = color1
+                else:
+                    self.monday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[1] == " True" or days1[1] == True:
                     self.tuesday_var_1color.background_color = color1
+                else:
+                    self.tuesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[2] == " True" or days1[2] == True:
                     self.wednesday_var_1color.background_color = color1
+                else:
+                    self.wednesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[3] == " True" or days1[3] == True:
                     self.thursday_var_1color.background_color = color1
+                else:
+                    self.thursday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[4] == " True" or days1[4] == True:
                     self.friday_var_1color.background_color = color1
+                else:
+                    self.friday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[5] == " True]" or days1[5] == True:
                     self.saturday_var_1color.background_color = color1
+                else:
+                    self.saturday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days2[0] == "[True" or days2[0] == True:
                     self.monday_var_2color.background_color = color2
+                else:
+                    self.monday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[1] == " True" or days2[1] == True:
                     self.tuesday_var_2color.background_color = color2
+                else:
+                    self.tuesday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[2] == " True" or days2[2] == True:
                     self.wednesday_var_2color.background_color = color2
+                else:
+                    self.wednesday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[3] == " True" or days2[3] == True:
                     self.thursday_var_2color.background_color = color2
+                else:
+                    self.thursday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[4] == " True" or days2[4] == True:
                     self.friday_var_2color.background_color = color2
+                else:
+                    self.friday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[5] == " True]" or days2[5] == True:
                     self.saturday_var_2color.background_color = color2
+                else:
+                    self.saturday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days3[0] == "[True" or days3[0] == True:
                     self.monday_var_3color.background_color = color3
+                else:
+                    self.monday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[1] == " True" or days3[1] == True:
                     self.tuesday_var_3color.background_color = color3
+                else:
+                    self.tuesday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[2] == " True" or days3[2] == True:
                     self.wednesday_var_3color.background_color = color3
+                else:
+                    self.wednesday_var_ecolor.background_color = [1, 1, 1, 1]
 
                 if days3[3] == " True" or days3[3] == True:
                     self.thursday_var_3color.background_color = color3
+                else:
+                    self.thursday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[4] == " True" or days3[4] == True:
                     self.friday_var_3color.background_color = color3
+                else:
+                    self.friday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[5] == " True]" or days3[5] == True:
                     self.saturday_var_3color.background_color = color3
+                else:
+                    self.saturday_var_2color.background_color = [1, 1, 1, 1]
 
                 self.monday_var_4color.background_color = [1, 1, 1, 1]
                 self.tuesday_var_4color.background_color = [1, 1, 1, 1]
@@ -283,7 +355,7 @@ class CalendarWindow(Screen):
                 self.thursday_var_4color.background_color = [1, 1, 1, 1]
                 self.friday_var_4color.background_color = [1, 1, 1, 1]
                 self.saturday_var_4color.background_color = [1, 1, 1, 1]
-                
+
             if university_amount == 13 or university_amount == "13":
                 if type(universityinfo[2]) == str:
                     color1 = [universityinfo[2][1], universityinfo[2][4], universityinfo[2][7], universityinfo[2][10]]
@@ -327,75 +399,123 @@ class CalendarWindow(Screen):
 
                 if days1[0] == "[True" or days1[0] == True:
                     self.monday_var_1color.background_color = color1
+                else:
+                    self.monday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[1] == " True" or days1[1] == True:
                     self.tuesday_var_1color.background_color = color1
+                else:
+                    self.tuesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[2] == " True" or days1[2] == True:
                     self.wednesday_var_1color.background_color = color1
+                else:
+                    self.wednesday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[3] == " True" or days1[3] == True:
                     self.thursday_var_1color.background_color = color1
+                else:
+                    self.thursday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[4] == " True" or days1[4] == True:
                     self.friday_var_1color.background_color = color1
+                else:
+                    self.friday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days1[5] == " True]" or days1[5] == True:
                     self.saturday_var_1color.background_color = color1
+                else:
+                    self.saturday_var_1color.background_color = [1, 1, 1, 1]
 
                 if days2[0] == "[True" or days2[0] == True:
                     self.monday_var_2color.background_color = color2
+                else:
+                    self.monday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[1] == " True" or days2[1] == True:
                     self.tuesday_var_2color.background_color = color2
+                else:
+                    self.tuesday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[2] == " True" or days2[2] == True:
                     self.wednesday_var_2color.background_color = color2
+                else:
+                    self.wednesday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[3] == " True" or days2[3] == True:
                     self.thursday_var_2color.background_color = color2
+                else:
+                    self.thursday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[4] == " True" or days2[4] == True:
                     self.friday_var_2color.background_color = color2
+                else:
+                    self.friday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days2[5] == " True]" or days2[5] == True:
                     self.saturday_var_2color.background_color = color2
+                else:
+                    self.saturday_var_2color.background_color = [1, 1, 1, 1]
 
                 if days3[0] == "[True" or days3[0] == True:
                     self.monday_var_3color.background_color = color3
+                else:
+                    self.monday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[1] == " True" or days3[1] == True:
                     self.tuesday_var_3color.background_color = color3
+                else:
+                    self.tuesday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[2] == " True" or days3[2] == True:
                     self.wednesday_var_3color.background_color = color3
+                else:
+                    self.wednesday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[3] == " True" or days3[3] == True:
                     self.thursday_var_3color.background_color = color3
+                else:
+                    self.thursday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[4] == " True" or days3[4] == True:
                     self.friday_var_3color.background_color = color3
+                else:
+                    self.friday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days3[5] == " True]" or days3[5] == True:
                     self.saturday_var_3color.background_color = color3
+                else:
+                    self.saturday_var_3color.background_color = [1, 1, 1, 1]
 
                 if days4[0] == "[True" or days4[0] == True:
                     self.monday_var_4color.background_color = color4
+                else:
+                    self.monday_var_4color.background_color = [1, 1, 1, 1]
 
                 if days4[1] == " True" or days4[1] == True:
                     self.tuesday_var_4color.background_color = color4
+                else:
+                    self.tuesday_var_4color.background_color = [1, 1, 1, 1]
 
                 if days4[2] == " True" or days4[2] == True:
                     self.wednesday_var_4color.background_color = color4
+                else:
+                    self.wednesday_var_4color.background_color = [1, 1, 1, 1]
 
                 if days4[3] == " True" or days4[3] == True:
                     self.thursday_var_4color.background_color = color4
+                else:
+                    self.thursday_var_4color.background_color = [1, 1, 1, 1]
 
                 if days4[4] == " True" or days4[4] == True:
                     self.friday_var_4color.background_color = color4
+                else:
+                    self.friday_var_4color.background_color = [1, 1, 1, 1]
 
                 if days4[5] == " True]" or days4[5] == True:
                     self.saturday_var_4color.background_color = color4
+                else:
+                    self.saturday_var_4color.background_color = [1, 1, 1, 1]
 
         except:
             pass
@@ -446,6 +566,16 @@ class AddUniversityWindow(Screen):
         self.button_var4.background_color = self.button_var4_color
         self.button_var5.background_color = self.button_var5_color
         self.button_var6.background_color = self.button_var6_color
+
+        print(universityinfo[2])
+        print(universityinfo[5])
+        print(universityinfo[8])
+        print(universityinfo[11])
+
+        print(self.button_var1_color)
+        print(self.button_var2_color)
+        print(self.button_var3_color)
+        print(self.button_var4_color)
 
         if str(universityinfo[2]) == "[0, 0, 1, 1]":
             self.button_var1.background_color = [0.5, 0.5, 1, 1]
@@ -542,6 +672,16 @@ class AddUniversityWindow(Screen):
         if str(universityinfo[11]) == "[0, 1, 1, 1]":
             self.button_var6.background_color = [0.8, 1, 1, 1]
             self.button_var6_color = [0.8, 1, 1, 1]
+
+        #if str(self.button_var1.background_color) == [0.5, 0.5, 1, 1] and "[0.5, 0.5, 1, 1]" not in universityinfo:
+        #    self.button_var1.background_color == [0, 0, 1, 1]
+
+        self.button_var1.background_color = self.button_var1_color
+        self.button_var2.background_color = self.button_var2_color
+        self.button_var3.background_color = self.button_var3_color
+        self.button_var4.background_color = self.button_var4_color
+        self.button_var5.background_color = self.button_var5_color
+        self.button_var6.background_color = self.button_var6_color
 
         self.button_var7.background_color = [1, 1, 1, 1]
         self.button_var8.background_color = [1, 1, 1, 1]
@@ -1138,6 +1278,270 @@ class SborkaApp(App):
 
             if days[5] == " True]":
                 self.root.calendar_var.saturday_var_1color.background_color = color
+
+        if university_amount == 7 or university_amount == "7":
+            if type(universityinfo[2]) == str:
+                color1 = [universityinfo[2][1], universityinfo[2][4], universityinfo[2][7], universityinfo[2][10]]
+            else:
+                color1 = [universityinfo[2][0], universityinfo[2][1], universityinfo[2][2], universityinfo[2][3]]
+
+            if type(universityinfo[5]) == str:
+                color2 = [universityinfo[5][1], universityinfo[5][4], universityinfo[5][7], universityinfo[5][10]]
+            else:
+                color2 = [universityinfo[5][0], universityinfo[5][1], universityinfo[5][2], universityinfo[5][3]]
+
+            if type(universityinfo[3]) == str:
+                days1 = universityinfo[3].split(",")
+            else:
+                days1 = [universityinfo[3][0], universityinfo[3][1], universityinfo[3][2], universityinfo[3][3],
+                         universityinfo[3][4], universityinfo[3][5]]
+
+            if type(universityinfo[6]) == str:
+                days2 = universityinfo[6].split(",")
+            else:
+                days2 = [universityinfo[6][0], universityinfo[6][1], universityinfo[6][2], universityinfo[6][3],
+                         universityinfo[6][4], universityinfo[6][5]]
+
+            if days1[0] == "[True" or days1[0] == True:
+                self.root.calendar_var.monday_var_1color.background_color = color1
+
+            if days1[1] == " True" or days1[1] == True:
+                self.root.calendar_var.tuesday_var_1color.background_color = color1
+
+            if days1[2] == " True" or days1[2] == True:
+                self.root.calendar_var.wednesday_var_1color.background_color = color1
+
+            if days1[3] == " True" or days1[3] == True:
+                self.root.calendar_var.thursday_var_1color.background_color = color1
+
+            if days1[4] == " True" or days1[4] == True:
+                self.root.calendar_var.friday_var_1color.background_color = color1
+
+            if days1[5] == " True]" or days1[5] == True:
+                self.root.calendar_var.saturday_var_1color.background_color = color1
+
+            if days2[0] == "[True" or days2[0] == True:
+                self.root.calendar_var.monday_var_2color.background_color = color2
+
+            if days2[1] == " True" or days2[1] == True:
+                self.root.calendar_var.tuesday_var_2color.background_color = color2
+
+            if days2[2] == " True" or days2[2] == True:
+                self.root.calendar_var.wednesday_var_2color.background_color = color2
+
+            if days2[3] == " True" or days2[3] == True:
+                self.root.calendar_var.thursday_var_2color.background_color = color2
+
+            if days2[4] == " True" or days2[4] == True:
+                self.root.calendar_var.friday_var_2color.background_color = color2
+
+            if days2[5] == " True]" or days2[5] == True:
+                self.root.calendar_var.saturday_var_2color.background_color = color2
+
+        if university_amount == 10 or university_amount == "10":
+            if type(universityinfo[2]) == str:
+                color1 = [universityinfo[2][1], universityinfo[2][4], universityinfo[2][7], universityinfo[2][10]]
+            else:
+                color1 = [universityinfo[2][0], universityinfo[2][1], universityinfo[2][2], universityinfo[2][3]]
+
+            if type(universityinfo[5]) == str:
+                color2 = [universityinfo[5][1], universityinfo[5][4], universityinfo[5][7], universityinfo[5][10]]
+            else:
+                color2 = [universityinfo[5][0], universityinfo[5][1], universityinfo[5][2], universityinfo[5][3]]
+
+            if type(universityinfo[8]) == str:
+                color3 = [universityinfo[8][1], universityinfo[8][4], universityinfo[8][7], universityinfo[8][10]]
+            else:
+                color3 = [universityinfo[8][0], universityinfo[8][1], universityinfo[8][2], universityinfo[8][3]]
+
+            if type(universityinfo[3]) == str:
+                days1 = universityinfo[3].split(",")
+            else:
+                days1 = [universityinfo[3][0], universityinfo[3][1], universityinfo[3][2], universityinfo[3][3],
+                         universityinfo[3][4], universityinfo[3][5]]
+
+            if type(universityinfo[6]) == str:
+                days2 = universityinfo[6].split(",")
+            else:
+                days2 = [universityinfo[6][0], universityinfo[6][1], universityinfo[6][2], universityinfo[6][3],
+                         universityinfo[6][4], universityinfo[6][5]]
+
+            if type(universityinfo[9]) == str:
+                days3 = universityinfo[9].split(",")
+            else:
+                days3 = [universityinfo[9][0], universityinfo[9][1], universityinfo[9][2], universityinfo[9][3],
+                         universityinfo[9][4], universityinfo[9][5]]
+
+            if days1[0] == "[True" or days1[0] == True:
+                self.root.calendar_var.monday_var_1color.background_color = color1
+
+            if days1[1] == " True" or days1[1] == True:
+                self.root.calendar_var.tuesday_var_1color.background_color = color1
+
+            if days1[2] == " True" or days1[2] == True:
+                self.root.calendar_var.wednesday_var_1color.background_color = color1
+
+            if days1[3] == " True" or days1[3] == True:
+                self.root.calendar_var.thursday_var_1color.background_color = color1
+
+            if days1[4] == " True" or days1[4] == True:
+                self.root.calendar_var.friday_var_1color.background_color = color1
+
+            if days1[5] == " True]" or days1[5] == True:
+                self.root.calendar_var.saturday_var_1color.background_color = color1
+
+            if days2[0] == "[True" or days2[0] == True:
+                self.root.calendar_var.monday_var_2color.background_color = color2
+
+            if days2[1] == " True" or days2[1] == True:
+                self.root.calendar_var.tuesday_var_2color.background_color = color2
+
+            if days2[2] == " True" or days2[2] == True:
+                self.root.calendar_var.wednesday_var_2color.background_color = color2
+
+            if days2[3] == " True" or days2[3] == True:
+                self.root.calendar_var.thursday_var_2color.background_color = color2
+
+            if days2[4] == " True" or days2[4] == True:
+                self.root.calendar_var.friday_var_2color.background_color = color2
+
+            if days2[5] == " True]" or days2[5] == True:
+                self.root.calendar_var.saturday_var_2color.background_color = color2
+
+            if days3[0] == "[True" or days3[0] == True:
+                self.root.calendar_var.monday_var_3color.background_color = color3
+
+            if days3[1] == " True" or days3[1] == True:
+                self.root.calendar_var.tuesday_var_3color.background_color = color3
+
+            if days3[2] == " True" or days3[2] == True:
+                self.root.calendar_var.wednesday_var_3color.background_color = color3
+
+            if days3[3] == " True" or days3[3] == True:
+                self.root.calendar_var.thursday_var_3color.background_color = color3
+
+            if days3[4] == " True" or days3[4] == True:
+                self.root.calendar_var.friday_var_3color.background_color = color3
+
+            if days3[5] == " True]" or days3[5] == True:
+                self.root.calendar_var.saturday_var_3color.background_color = color3
+
+        if university_amount == 13 or university_amount == "13":
+            if type(universityinfo[2]) == str:
+                color1 = [universityinfo[2][1], universityinfo[2][4], universityinfo[2][7], universityinfo[2][10]]
+            else:
+                color1 = [universityinfo[2][0], universityinfo[2][1], universityinfo[2][2], universityinfo[2][3]]
+
+            if type(universityinfo[5]) == str:
+                color2 = [universityinfo[5][1], universityinfo[5][4], universityinfo[5][7], universityinfo[5][10]]
+            else:
+                color2 = [universityinfo[5][0], universityinfo[5][1], universityinfo[5][2], universityinfo[5][3]]
+
+            if type(universityinfo[8]) == str:
+                color3 = [universityinfo[8][1], universityinfo[8][4], universityinfo[8][7], universityinfo[8][10]]
+            else:
+                color3 = [universityinfo[8][0], universityinfo[8][1], universityinfo[8][2], universityinfo[8][3]]
+
+            if type(universityinfo[11]) == str:
+                color4 = [universityinfo[11][1], universityinfo[11][4], universityinfo[11][7], universityinfo[11][10]]
+            else:
+                color4 = [universityinfo[11][0], universityinfo[11][1], universityinfo[11][2], universityinfo[11][3]]
+
+            if type(universityinfo[3]) == str:
+                days1 = universityinfo[3].split(",")
+            else:
+                days1 = [universityinfo[3][0], universityinfo[3][1], universityinfo[3][2], universityinfo[3][3],
+                         universityinfo[3][4], universityinfo[3][5]]
+
+            if type(universityinfo[6]) == str:
+                days2 = universityinfo[6].split(",")
+            else:
+                days2 = [universityinfo[6][0], universityinfo[6][1], universityinfo[6][2], universityinfo[6][3],
+                         universityinfo[6][4], universityinfo[6][5]]
+
+            if type(universityinfo[9]) == str:
+                days3 = universityinfo[9].split(",")
+            else:
+                days3 = [universityinfo[9][0], universityinfo[9][1], universityinfo[9][2], universityinfo[9][3],
+                         universityinfo[9][4], universityinfo[9][5]]
+
+            if type(universityinfo[12]) == str:
+                days4 = universityinfo[12].split(",")
+            else:
+                days4 = [universityinfo[12][0], universityinfo[12][1], universityinfo[12][2], universityinfo[12][3],
+                         universityinfo[12][4], universityinfo[12][5]]
+
+            if days1[0] == "[True" or days1[0] == True:
+                self.root.calendar_var.monday_var_1color.background_color = color1
+
+            if days1[1] == " True" or days1[1] == True:
+                self.root.calendar_var.tuesday_var_1color.background_color = color1
+
+            if days1[2] == " True" or days1[2] == True:
+                self.root.calendar_var.wednesday_var_1color.background_color = color1
+
+            if days1[3] == " True" or days1[3] == True:
+                self.root.calendar_var.thursday_var_1color.background_color = color1
+
+            if days1[4] == " True" or days1[4] == True:
+                self.root.calendar_var.friday_var_1color.background_color = color1
+
+            if days1[5] == " True]" or days1[5] == True:
+                self.root.calendar_var.saturday_var_1color.background_color = color1
+
+            if days2[0] == "[True" or days2[0] == True:
+                self.root.calendar_var.monday_var_2color.background_color = color2
+
+            if days2[1] == " True" or days2[1] == True:
+                self.root.calendar_var.tuesday_var_2color.background_color = color2
+
+            if days2[2] == " True" or days2[2] == True:
+                self.root.calendar_var.wednesday_var_2color.background_color = color2
+
+            if days2[3] == " True" or days2[3] == True:
+                self.root.calendar_var.thursday_var_2color.background_color = color2
+
+            if days2[4] == " True" or days2[4] == True:
+                self.root.calendar_var.friday_var_2color.background_color = color2
+
+            if days2[5] == " True]" or days2[5] == True:
+                self.root.calendar_var.saturday_var_2color.background_color = color2
+
+            if days3[0] == "[True" or days3[0] == True:
+                self.root.calendar_var.monday_var_3color.background_color = color3
+
+            if days3[1] == " True" or days3[1] == True:
+                self.root.calendar_var.tuesday_var_3color.background_color = color3
+
+            if days3[2] == " True" or days3[2] == True:
+                self.root.calendar_var.wednesday_var_3color.background_color = color3
+
+            if days3[3] == " True" or days3[3] == True:
+                self.root.calendar_var.thursday_var_3color.background_color = color3
+
+            if days3[4] == " True" or days3[4] == True:
+                self.root.calendar_var.friday_var_3color.background_color = color3
+
+            if days3[5] == " True]" or days3[5] == True:
+                self.root.calendar_var.saturday_var_3color.background_color = color3
+
+            if days4[0] == "[True" or days4[0] == True:
+                self.root.calendar_var.monday_var_4color.background_color = color4
+
+            if days4[1] == " True" or days4[1] == True:
+                self.root.calendar_var.tuesday_var_4color.background_color = color4
+
+            if days4[2] == " True" or days4[2] == True:
+                self.root.calendar_var.wednesday_var_4color.background_color = color4
+
+            if days4[3] == " True" or days4[3] == True:
+                self.root.calendar_var.thursday_var_4color.background_color = color4
+
+            if days4[4] == " True" or days4[4] == True:
+                self.root.calendar_var.friday_var_4color.background_color = color4
+
+            if days4[5] == " True]" or days4[5] == True:
+                self.root.calendar_var.saturday_var_4color.background_color = color4
 
 
 if __name__ == "__main__":
