@@ -1,4 +1,5 @@
 from datetime import timedelta, datetime
+from time import strftime
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.button import Button
@@ -520,6 +521,12 @@ class CalendarWindow(Screen):
         except:
             pass
 
+        try:
+            self.week_var.text = "fasfasffd"
+
+        except:
+            pass
+
     def on_monday(self):
         global dayid
         dayid = 1
@@ -809,18 +816,20 @@ class AddUniversityWindow(Screen):
     def set_university_values(self):
         global university_amount
 
-        if type(self.color_button_index) != int and self.text_input_var.text != "" and int(universityinfo[0]) != 13 and self.can_add_university and str(self.color_button_index.base_color) != str(universityinfo[2]) and str(self.color_button_index.base_color) != str(universityinfo[5]) and str(self.color_button_index.base_color) != str(universityinfo[8]) and str(self.color_button_index.base_color) != str(universityinfo[11]):
-            universityinfo[0] = str(int(universityinfo[0]) + 3)
-            universityinfo[int(university_amount)] = self.text_input_var.text
-            universityinfo[int(university_amount) + 1] = self.color_button_index.base_color
-            universityinfo[int(university_amount) + 2] = self.day_button_indexes
-            university_amount = int(university_amount) + 3
-            os.remove("UniversityInfo.txt")
-            UniversityInfo = open("UniversityInfo.txt", "w")
+        if self.day_button_indexes[0] == True or self.day_button_indexes[1] == True or self.day_button_indexes[2] == True or self.day_button_indexes[3] == True or self.day_button_indexes[4] == True or self.day_button_indexes[5] == True:
+            print("|dsfgdsfgs")
+            if type(self.color_button_index) != int and self.text_input_var.text != "" and int(universityinfo[0]) != 13 and self.can_add_university and str(self.color_button_index.base_color) != str(universityinfo[2]) and str(self.color_button_index.base_color) != str(universityinfo[5]) and str(self.color_button_index.base_color) != str(universityinfo[8]) and str(self.color_button_index.base_color) != str(universityinfo[11]):
+                universityinfo[0] = str(int(universityinfo[0]) + 3)
+                universityinfo[int(university_amount)] = self.text_input_var.text
+                universityinfo[int(university_amount) + 1] = self.color_button_index.base_color
+                universityinfo[int(university_amount) + 2] = self.day_button_indexes
+                university_amount = int(university_amount) + 3
+                os.remove("UniversityInfo.txt")
+                UniversityInfo = open("UniversityInfo.txt", "w")
 
-            for i in universityinfo:
-                UniversityInfo.writelines(str(i) + "\n")
-            UniversityInfo.close()
+                for i in universityinfo:
+                    UniversityInfo.writelines(str(i) + "\n")
+                UniversityInfo.close()
 
 
 class ChangeUniversityWindow(Screen):
@@ -1542,6 +1551,8 @@ class SborkaApp(App):
 
             if days4[5] == " True]" or days4[5] == True:
                 self.root.calendar_var.saturday_var_4color.background_color = color4
+
+        self.root.calendar_var.week_var.text = str(ToDay.isocalendar()[1])
 
 
 if __name__ == "__main__":
