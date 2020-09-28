@@ -567,128 +567,47 @@ class AddUniversityWindow(Screen):
     def on_enter(self):
         self.day_button_indexes = [False for i in range(6)]
 
-        self.button_var1.background_color = self.button_var1_color
-        self.button_var2.background_color = self.button_var2_color
-        self.button_var3.background_color = self.button_var3_color
-        self.button_var4.background_color = self.button_var4_color
-        self.button_var5.background_color = self.button_var5_color
-        self.button_var6.background_color = self.button_var6_color
-
-        print(universityinfo[2])
-        print(universityinfo[5])
-        print(universityinfo[8])
-        print(universityinfo[11])
-
-        print(self.button_var1_color)
-        print(self.button_var2_color)
-        print(self.button_var3_color)
-        print(self.button_var4_color)
-
-        if str(universityinfo[2]) == "[0, 0, 1, 1]":
+        if str(universityinfo[2]) == "[0, 0, 1, 1]" or str(universityinfo[5]) == "[0, 0, 1, 1]" or str(universityinfo[8]) == "[0, 0, 1, 1]" or str(universityinfo[11]) == "[0, 0, 1, 1]":
             self.button_var1.background_color = [0.5, 0.5, 1, 1]
             self.button_var1_color = [0.5, 0.5, 1, 1]
+        else:
+            self.button_var1.background_color = [0, 0, 1, 1]
+            self.button_var1_color = [0, 0, 1, 1]
 
-        if str(universityinfo[2]) == "[0, 1, 0, 1]":
+        if str(universityinfo[2]) == "[0, 1, 0, 1]" or str(universityinfo[5]) == "[0, 1, 0, 1]" or str(universityinfo[8]) == "[0, 1, 0, 1]" or str(universityinfo[11]) == "[0, 1, 0, 1]":
             self.button_var2.background_color = [0.5, 1, 0.5, 1]
             self.button_var2_color = [0.5, 1, 0.5, 1]
+        else:
+            self.button_var2.background_color = [0, 1, 0, 1]
+            self.button_var2_color = [0, 1, 0, 1]
 
-        if str(universityinfo[2]) == "[1, 0, 0, 1]":
-            self.button_var3.background_color = [1, 0.5, 0.5, 1]
-            self.button_var3_color = [1, 0.5, 0.5, 1]
+        if str(universityinfo[2]) == "[1, 0, 0, 1]" or str(universityinfo[5]) == "[1, 0, 0, 1]" or str(universityinfo[8]) == "[1, 0, 0, 1]" or str(universityinfo[11]) == "[1, 0, 0, 1]":
+            self.button_var3.background_color = [0.5, 0.5, 1, 1]
+            self.button_var3_color = [0.5, 0.5, 1, 1]
+        else:
+            self.button_var3.background_color = [1, 0, 0, 1]
+            self.button_var3_color = [1, 0, 0, 1]
 
-        if str(universityinfo[2]) == "[1, 1, 0, 1]":
+        if str(universityinfo[2]) == "[1, 1, 0, 1]" or str(universityinfo[5]) == "[1, 1, 0, 1]" or str(universityinfo[8]) == "[1, 1, 0, 1]" or str(universityinfo[11]) == "[1, 1, 0, 1]":
             self.button_var4.background_color = [1, 1, 0.8, 1]
             self.button_var4_color = [1, 1, 0.8, 1]
+        else:
+            self.button_var4.background_color = [1, 1, 0, 1]
+            self.button_var4_color = [1, 1, 0, 1]
 
-        if str(universityinfo[2]) == "[1, 0, 1, 1]":
+        if str(universityinfo[2]) == "[1, 0, 1, 1]" or str(universityinfo[5]) == "[1, 0, 1, 1]" or str(universityinfo[8]) == "[1, 0, 1, 1]" or str(universityinfo[11]) == "[1, 0, 1, 1]":
             self.button_var5.background_color = [1, 0.8, 1, 1]
             self.button_var5_color = [1, 0.8, 1, 1]
+        else:
+            self.button_var5.background_color = [1, 0, 1, 1]
+            self.button_var5_color = [1, 0, 1, 1]
 
-        if str(universityinfo[2]) == "[0, 1, 1, 1]":
+        if str(universityinfo[2]) == "[0, 1, 1, 1]" or str(universityinfo[5]) == "[0, 1, 1, 1]" or str(universityinfo[8]) == "[0, 1, 1, 1]" or str(universityinfo[11]) == "[0, 1, 1, 1]":
             self.button_var6.background_color = [0.8, 1, 1, 1]
             self.button_var6_color = [0.8, 1, 1, 1]
-
-        if str(universityinfo[5]) == "[0, 0, 1, 1]":
-            self.button_var1.background_color = [0.5, 0.5, 1, 1]
-            self.button_var1_color = [0.5, 0.5, 1, 1]
-
-        if str(universityinfo[5]) == "[0, 1, 0, 1]":
-            self.button_var2.background_color = [0.5, 1, 0.5, 1]
-            self.button_var2_color = [0.5, 1, 0.5, 1]
-
-        if str(universityinfo[5]) == "[1, 0, 0, 1]":
-            self.button_var3.background_color = [1, 0.5, 0.5, 1]
-            self.button_var3_color = [1, 0.5, 0.5, 1]
-
-        if str(universityinfo[5]) == "[1, 1, 0, 1]":
-            self.button_var4.background_color = [1, 1, 0.8, 1]
-            self.button_var4_color = [1, 1, 0.8, 1]
-
-        if str(universityinfo[5]) == "[1, 0, 1, 1]":
-            self.button_var5.background_color = [1, 0.8, 1, 1]
-            self.button_var5_color = [1, 0.8, 1, 1]
-
-        if str(universityinfo[5]) == "[0, 1, 1, 1]":
-            self.button_var6.background_color = [0.8, 1, 1, 1]
-            self.button_var6_color = [0.8, 1, 1, 1]
-
-        if str(universityinfo[8]) == "[0, 0, 1, 1]":
-            self.button_var1.background_color = [0.5, 0.5, 1, 1]
-            self.button_var1_color = [0.5, 0.5, 1, 1]
-
-        if str(universityinfo[8]) == "[0, 1, 0, 1]":
-            self.button_var2.background_color = [0.5, 1, 0.5, 1]
-            self.button_var2_color = [0.5, 1, 0.5, 1]
-
-        if str(universityinfo[8]) == "[1, 0, 0, 1]":
-            self.button_var3.background_color = [1, 0.5, 0.5, 1]
-            self.button_var3_color = [1, 0.5, 0.5, 1]
-
-        if str(universityinfo[8]) == "[1, 1, 0, 1]":
-            self.button_var4.background_color = [1, 1, 0.8, 1]
-            self.button_var4_color = [1, 1, 0.8, 1]
-
-        if str(universityinfo[8]) == "[1, 0, 1, 1]":
-            self.button_var5.background_color = [1, 0.8, 1, 1]
-            self.button_var5_color = [1, 0.8, 1, 1]
-
-        if str(universityinfo[8]) == "[0, 1, 1, 1]":
-            self.button_var6.background_color = [0.8, 1, 1, 1]
-            self.button_var6_color = [0.8, 1, 1, 1]
-
-        if str(universityinfo[11]) == "[0, 0, 1, 1]":
-            self.button_var1.background_color = [0.5, 0.5, 1, 1]
-            self.button_var1_color = [0.5, 0.5, 1, 1]
-
-        if str(universityinfo[11]) == "[0, 1, 0, 1]":
-            self.button_var2.background_color = [0.5, 1, 0.5, 1]
-            self.button_var2_color = [0.5, 1, 0.5, 1]
-
-        if str(universityinfo[11]) == "[1, 0, 0, 1]":
-            self.button_var3.background_color = [1, 0.5, 0.5, 1]
-            self.button_var3_color = [1, 0.5, 0.5, 1]
-
-        if str(universityinfo[11]) == "[1, 1, 0, 1]":
-            self.button_var4.background_color = [1, 1, 0.8, 1]
-            self.button_var4_color = [1, 1, 0.8, 1]
-
-        if str(universityinfo[11]) == "[1, 0, 1, 1]":
-            self.button_var5.background_color = [1, 0.8, 1, 1]
-            self.button_var5_color = [1, 0.8, 1, 1]
-
-        if str(universityinfo[11]) == "[0, 1, 1, 1]":
-            self.button_var6.background_color = [0.8, 1, 1, 1]
-            self.button_var6_color = [0.8, 1, 1, 1]
-
-        #if str(self.button_var1.background_color) == [0.5, 0.5, 1, 1] and "[0.5, 0.5, 1, 1]" not in universityinfo:
-        #    self.button_var1.background_color == [0, 0, 1, 1]
-
-        self.button_var1.background_color = self.button_var1_color
-        self.button_var2.background_color = self.button_var2_color
-        self.button_var3.background_color = self.button_var3_color
-        self.button_var4.background_color = self.button_var4_color
-        self.button_var5.background_color = self.button_var5_color
-        self.button_var6.background_color = self.button_var6_color
+        else:
+            self.button_var6.background_color = [0, 1, 1, 1]
+            self.button_var6_color = [0, 1, 1, 1]
 
         self.button_var7.background_color = [1, 1, 1, 1]
         self.button_var8.background_color = [1, 1, 1, 1]
