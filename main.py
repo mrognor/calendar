@@ -14,6 +14,8 @@ import locale
 ToDay = datetime.now()
 n = ToDay.weekday()
 MonDate = ToDay + timedelta(days=-n)
+NextMonDate = MonDate + timedelta(days=+7)
+
 BackgroundsColors = [[1, 1, 1, 1] for i in range(6)]
 if n != 6:
     BackgroundsColors[n] = [0.5, 0.5, 0.5, 1]
@@ -70,6 +72,8 @@ except FileNotFoundError:
     WeeksInfo.close()
 
 weeksinfo[0] = abs(int(ToDay.isocalendar()[1]) - int(weeksinfo[1]))
+next_weekinfo = weeksinfo[0] + 1
+
 os.remove("WeeksInfo.txt")
 WeeksInfo = open("WeeksInfo.txt", "w")
 
@@ -84,9 +88,19 @@ Wednesday = "Среда" + "\n" + str((MonDate + timedelta(days=2)).date())[5:7]
 Thursday = "Четверг" + "\n" + str((MonDate + timedelta(days=3)).date())[5:7] + " Месяц" + "\n" + str((MonDate + timedelta(days=3)).date())[8:10] + " Число"
 Friday = "Пятница" + "\n" + str((MonDate + timedelta(days=4)).date())[5:7] + " Месяц" + "\n" + str((MonDate + timedelta(days=4)).date())[8:10] + " Число"
 Saturday = "Суббота" + "\n" + str((MonDate + timedelta(days=5)).date())[5:7] + " Месяц" + "\n" + str((MonDate + timedelta(days=5)).date())[8:10] + " Число"
+
+NextMonday = "Понедельник" + "\n" + str(NextMonDate.date())[5:7] + " Месяц" + "\n" + str(NextMonDate.date())[8:10] + " Число"
+NextTuesday = "Вторник" + "\n" + str((NextMonDate + timedelta(days=1)).date())[5:7] + " Месяц" + "\n" + str((NextMonDate + timedelta(days=1)).date())[8:10] + " Число"
+NextWednesday = "Среда" + "\n" + str((NextMonDate + timedelta(days=2)).date())[5:7] + " Месяц" + "\n" + str((NextMonDate + timedelta(days=2)).date())[8:10] + " Число"
+NextThursday = "Четверг" + "\n" + str((NextMonDate + timedelta(days=3)).date())[5:7] + " Месяц" + "\n" + str((NextMonDate + timedelta(days=3)).date())[8:10] + " Число"
+NextFriday = "Пятница" + "\n" + str((NextMonDate + timedelta(days=4)).date())[5:7] + " Месяц" + "\n" + str((NextMonDate + timedelta(days=4)).date())[8:10] + " Число"
+NextSaturday = "Суббота" + "\n" + str((NextMonDate + timedelta(days=5)).date())[5:7] + " Месяц" + "\n" + str((NextMonDate + timedelta(days=5)).date())[8:10] + " Число"
+
 dayid = 0
 university_amount = universityinfo[0]
 university_deleteid = -1
+
+isnext_week = False
 
 
 class CalendarWindow(Screen):
@@ -575,6 +589,64 @@ class CalendarWindow(Screen):
         global dayid
         dayid = 6
 
+    def set_next_week(self):
+        global weeksinfo
+        global next_weekinfo
+        global isnext_week
+
+        was_changes = False
+
+        nextweek = 100 * (int(next_weekinfo) % 2)
+        nowweek = 100 * (int(weeksinfo[0]) % 2)
+
+        if not isnext_week:
+            isnext_week = True
+            was_changes = True
+
+            self.monday_var.text = NextMonday + "\n" + dayinfo[1 + nextweek] + "\n" + dayinfo[2 + nextweek] + "\n" + dayinfo[3 + nextweek] + "\n" + dayinfo[4 + nextweek] + "\n" + dayinfo[5 + nextweek] + "\n" + dayinfo[6 + nextweek] + "\n" + dayinfo[7 + nextweek]
+            self.monday_var.background_color = BackgroundsColors[0]
+
+            self.tuesday_var.text = NextTuesday + "\n" + dayinfo[11 + nextweek] + "\n" + dayinfo[12 + nextweek] + "\n" + dayinfo[13 + nextweek] + "\n" + dayinfo[14 + nextweek] + "\n" + dayinfo[15 + nextweek] + "\n" + dayinfo[16 + nextweek] + "\n" + dayinfo[17 + nextweek]
+            self.tuesday_var.background_color = BackgroundsColors[1]
+
+            self.thursday_var.text = NextThursday + "\n" + dayinfo[31 + nextweek] + "\n" + dayinfo[32 + nextweek] + "\n" + dayinfo[33 + nextweek] + "\n" + dayinfo[34 + nextweek] + "\n" + dayinfo[35 + nextweek] + "\n" + dayinfo[36 + nextweek] + "\n" + dayinfo[37 + nextweek]
+            self.thursday_var.background_color = BackgroundsColors[3]
+
+            self.wednesday_var.text = NextWednesday + "\n" + dayinfo[21 + nextweek] + "\n" + dayinfo[22 + nextweek] + "\n" + dayinfo[23 + nextweek] + "\n" + dayinfo[24 + nextweek] + "\n" + dayinfo[25 + nextweek] + "\n" + dayinfo[26 + nextweek] + "\n" + dayinfo[27 + nextweek]
+            self.wednesday_var.background_color = BackgroundsColors[2]
+
+            self.thursday_var.text = NextThursday + "\n" + dayinfo[31 + nextweek] + "\n" + dayinfo[32 + nextweek] + "\n" + dayinfo[33 + nextweek] + "\n" + dayinfo[34 + nextweek] + "\n" + dayinfo[35 + nextweek] + "\n" + dayinfo[36 + nextweek] + "\n" + dayinfo[37 + nextweek]
+            self.thursday_var.background_color = BackgroundsColors[3]
+
+            self.friday_var.text = NextFriday + "\n" + dayinfo[41 + nextweek] + "\n" + dayinfo[42 + nextweek] + "\n" + dayinfo[43 + nextweek] + "\n" + dayinfo[44 + nextweek] + "\n" + dayinfo[45 + nextweek] + "\n" + dayinfo[46 + nextweek] + "\n" + dayinfo[47 + nextweek]
+            self.friday_var.background_color = BackgroundsColors[4]
+
+            self.saturday_var.text = NextSaturday + "\n" + dayinfo[51 + nextweek] + "\n" + dayinfo[52 + nextweek] + "\n" + dayinfo[53 + nextweek] + "\n" + dayinfo[54 + nextweek] + "\n" + dayinfo[55 + nextweek] + "\n" + dayinfo[56 + nextweek] + "\n" + dayinfo[57 + nextweek]
+            self.saturday_var.background_color = BackgroundsColors[5]
+
+        if isnext_week and not was_changes:
+            isnext_week = False
+            self.monday_var.text = Monday + "\n" + dayinfo[1 + nowweek] + "\n" + dayinfo[2 + nowweek] + "\n" + dayinfo[3 + nowweek] + "\n" + dayinfo[4 + nowweek] + "\n" + dayinfo[5 + nowweek] + "\n" + dayinfo[6 + nowweek] + "\n" + dayinfo[7 + nowweek]
+            self.monday_var.background_color = BackgroundsColors[0]
+
+            self.tuesday_var.text = Tuesday + "\n" + dayinfo[11 + nowweek] + "\n" + dayinfo[12 + nowweek] + "\n" + dayinfo[13 + nowweek] + "\n" + dayinfo[14 + nowweek] + "\n" + dayinfo[15 + nowweek] + "\n" + dayinfo[16 + nowweek] + "\n" + dayinfo[17 + nowweek]
+            self.tuesday_var.background_color = BackgroundsColors[1]
+
+            self.thursday_var.text = Thursday + "\n" + dayinfo[31 + nowweek] + "\n" + dayinfo[32 + nowweek] + "\n" + dayinfo[33 + nowweek] + "\n" + dayinfo[34 + nowweek] + "\n" + dayinfo[35 + nowweek] + "\n" + dayinfo[36 + nowweek] + "\n" + dayinfo[37 + nowweek]
+            self.thursday_var.background_color = BackgroundsColors[3]
+
+            self.wednesday_var.text = Wednesday + "\n" + dayinfo[21 + nowweek] + "\n" + dayinfo[22 + nowweek] + "\n" + dayinfo[23 + nowweek] + "\n" + dayinfo[24 + nowweek] + "\n" + dayinfo[25 + nowweek] + "\n" + dayinfo[26 + nowweek] + "\n" + dayinfo[27 + nowweek]
+            self.wednesday_var.background_color = BackgroundsColors[2]
+
+            self.thursday_var.text = Thursday + "\n" + dayinfo[31 + nowweek] + "\n" + dayinfo[32 + nowweek] + "\n" + dayinfo[33 + nowweek] + "\n" + dayinfo[34 + nowweek] + "\n" + dayinfo[35 + nowweek] + "\n" + dayinfo[36 + nowweek] + "\n" + dayinfo[37 + nowweek]
+            self.thursday_var.background_color = BackgroundsColors[3]
+
+            self.friday_var.text = Friday + "\n" + dayinfo[41 + nowweek] + "\n" + dayinfo[42 + nowweek] + "\n" + dayinfo[43 + nowweek] + "\n" + dayinfo[44 + nowweek] + "\n" + dayinfo[45 + nowweek] + "\n" + dayinfo[46 + nowweek] + "\n" + dayinfo[47 + nowweek]
+            self.friday_var.background_color = BackgroundsColors[4]
+
+            self.saturday_var.text = Saturday + "\n" + dayinfo[51 + nowweek] + "\n" + dayinfo[52 + nowweek] + "\n" + dayinfo[53 + nowweek] + "\n" + dayinfo[54 + nowweek] + "\n" + dayinfo[55 + nowweek] + "\n" + dayinfo[56 + nowweek] + "\n" + dayinfo[57 + nowweek]
+            self.saturday_var.background_color = BackgroundsColors[5]
+
 
 class AddUniversityWindow(Screen):
     global university_amount
@@ -993,7 +1065,13 @@ class ChangeUniversityWindow(Screen):
 class ChangeDayInfoWindow(Screen):
     def on_enter(self):
         global weeksinfo
-        week = 100 * (int(weeksinfo[0]) % 2)
+        global isnext_week
+        global next_weekinfo
+
+        if isnext_week:
+            week = 100 * (int(next_weekinfo) % 2)
+        else:
+            week = 100 * (int(weeksinfo[0]) % 2)
 
         if dayid == 1:
             self.first_text.text = dayinfo[1 + week]
@@ -1046,7 +1124,13 @@ class ChangeDayInfoWindow(Screen):
 
     def set_values(self):
         global weeksinfo
-        week = 100 * (int(weeksinfo[0]) % 2)
+        global isnext_week
+        global next_weekinfo
+
+        if isnext_week:
+            week = 100 * (int(next_weekinfo) % 2)
+        else:
+            week = 100 * (int(weeksinfo[0]) % 2)
 
         if dayid == 1:
             self.parent.calendar_var.monday_var.text = Monday + "\n" + self.first_text.text + "\n" + self.second_text.text + "\n" + self.third_text.text + "\n" + self.fourth_text.text + "\n" + self.fifth_text.text + "\n" + self.sixth_text.text + "\n" + self.seventh_text.text
@@ -1504,7 +1588,11 @@ class SborkaApp(App):
             if days4[5] == " True]" or days4[5] == True:
                 self.root.calendar_var.saturday_var_4color.background_color = color4
 
-        self.root.calendar_var.week_var.text = str(weeksinfo[0] + 1) + " week"
+        if (weeksinfo[0] + 1) % 2 == 0:
+            self.root.calendar_var.week_var.text = "                                  четная неделя"
+
+        if (weeksinfo[0] + 1) % 2 == 1:
+            self.root.calendar_var.week_var.text = "                                  нечетная неделя"
 
 
 if __name__ == "__main__":

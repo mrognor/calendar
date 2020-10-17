@@ -56,14 +56,15 @@ WindowManager:
         spacing: 10
 
         BoxLayout:
-            size_hint_y: 0.05
-            orientation: "horizontal"
-            padding: 10
-            spacing: 10
-
-            Label:
+            size_hint_y: 0.2
+            Button:
                 id: WeekID
-                text: "aiaiai"
+                text: ""
+                on_release:
+                    root.set_next_week()
+
+            Button:
+                size_hint_x: 0.2
 
         BoxLayout:
             orientation: "horizontal"
